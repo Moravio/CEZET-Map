@@ -17,6 +17,8 @@ Na mapu lze také přidat bod zájmu. Tento bod se pozicuje procentuálně k roz
 ### Vytvořili šikovní kluci a holky z Moravio.com
 V Moravio se snažíme pracovní procesy neustále zjednodušovat a zlepšovat. Při každodenní práci se zamýšlíme, jak jednotlivé problémy a postupy řešit lépe a moderněji. Pokud si myslíme, že je náš projekt užitečný, rádi jej dáme k dispozici komunitě webových vývojářů.
 
+CEZET Map je dostupná pod licencí [Creative Commons BY](http://creativecommons.org/licenses/by/3.0/cz/) (Uveďte autora).
+
 ## Sledujte nás
 [Jaromír Kavan (@toshtak)](https://twitter.com/toshtak), [Tomáš Musiol (@kozleek)](https://twitter.com/kozleek), [Patrik Illy (@illycz)](https://twitter.com/illycz) & [Moravio](https://twitter.com/moravio_cz).</p>
 
