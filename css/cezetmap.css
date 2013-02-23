@@ -42,11 +42,8 @@
 .cezetmap a{ color: inherit; }
 
 .cezetmap .kraje,
-.cezetmap .regions,
 .cezetmap .kraj,
-.cezetmap .region,
-.cezetmap .mesta,
-.cezetmap .cities{
+.cezetmap .mesta{
 	display: block;
 	position: absolute;
 	left: 0;
@@ -56,7 +53,7 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	-webkit-transition: all .3s ease-in;
+	-webkit-transition: color .3s ease-in;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -69,22 +66,19 @@
 /* nastaveni kraju                */
 /* ============================== */
 
-.cezetmap .kraje,
-.cezetmap .regions{
+.cezetmap .kraje{
 	z-index: 400;
 	overflow: hidden;
 }
 
-.cezetmap .kraj,
-.cezetmap .region{
+.cezetmap .kraj{
 	top: -37.8%;
 	*top: -23.8%;
 }
 
 /* IE 9 hack */
 @media all and (min-width:0) {
-	.cezetmap .kraj,
-	.cezetmap .region{
+	.cezetmap .kraj{
 		top: -29.8% \0/;
 	}
 }
@@ -93,39 +87,43 @@
 /* nastaveni mest                 */
 /* ============================== */
 
-.cezetmap .mesta,
-.cezetmap .cities{
+.cezetmap .mesta{
 	z-index: 500;
 }
 
 .cezetmap .mesto,
-.cezetmap .city,
-.cezetmap .mesto:before,
-.cezetmap .city:before{
+.cezetmap .mesto:before{
 	display: block;
 	position: absolute;
 	font-size: 0;
 	border-radius: 100%;
-	border: 1px solid white;
 }
 
-.cezetmap .mesto,
-.cezetmap .city{
+.cezetmap .mesto{
 	width: 8px;
 	height: 8px;
 	margin-left: -4px;
 	margin-top: -4px;
 	background: white;
 	text-indent: 9999px;
-	z-index: 990;
+	z-index: 900;
 }
 
-.cezetmap .mesto:before,
-.cezetmap .city:before{
+.cezetmap .mesto:before{
 	content: "";
 	width: 16px;
 	height: 16px;
 	margin-left: -5px;
 	margin-top: -5px;
 	z-index: 800;
+	border: 1px solid white;
+}
+
+.cezetmap .mesto a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0; top: 0;
+	z-index: 999;
 }

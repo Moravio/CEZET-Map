@@ -34,40 +34,35 @@
 .cezetmap .moravskoslezsky		{ color: #59C6F5; }
 .cezetmap .zlinsky				{ color: #90D9F8; }
 
-.cezetmap .kraj_active,
-.cezetmap .region_active{
-}
-
-.cezetmap .kraj_hover,
-.cezetmap .region_hover{
+.cezetmap .kraj_hover{
 	color: #FF424F;
 }
 
+.cezetmap .kraj_active{
+	color: #273248;
+}
 
 /* ============================== */
 /* nastaveni mest                 */
 /* ============================== */
 
-.cezetmap .mesto,
-.cezetmap .city{
+.cezetmap .mesto{
 	width: 8px;
 	height: 8px;
 	margin-left: -4px;
 	margin-top: -4px;	
 	background: white;
-	border-color: transparent;
 }
 
-.cezetmap .mesto:before,
-.cezetmap .city:before{
+.cezetmap .mesto:before{
 	width: 16px;
 	height: 16px;
 	margin-left: -5px;
 	margin-top: -5px;
 }
 
-.cezetmap .mesto_active,
-.cezetmap .city_active{
+.cezetmap .mesto_active{
+	background-color: #FF424F;
 }
 
 /* ============================== */
