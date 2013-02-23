@@ -8,24 +8,16 @@
 
 .cezetmap{
 	/* width & height ratio: 1.734 */
-	width: 1000px;
+	width: 370px;
 	/* 370 / 1.734 = 213.39 */
-	height: 576px;
+	height: 213px;
 	/* musi byt stejne jako sirka (width) elementu cezetmap */
-	font-size: 1000px;
-
-	position: absolute;
-	left: 50%; margin-left: -500px;
-	top: 50%; margin-top: -288px;
+	font-size: 370px;
 }
 
 /* ============================== */
 /* nastaveni kraju                */
 /* ============================== */
-
-.cezetmap .kraj_active,
-.cezetmap .region_active{
-}
 
 .cezetmap .hlavni-mesto-praha 	{ color: #59C6F5; }
 .cezetmap .stredocesky			{ color: #90D9F8; }
@@ -41,6 +33,16 @@
 .cezetmap .olomoucky			{ color: #59C6F5; }
 .cezetmap .moravskoslezsky		{ color: #59C6F5; }
 .cezetmap .zlinsky				{ color: #90D9F8; }
+
+.cezetmap .kraj_active,
+.cezetmap .region_active{
+}
+
+.cezetmap .kraj_hover,
+.cezetmap .region_hover{
+	color: #FF424F;
+}
+
 
 /* ============================== */
 /* nastaveni mest                 */

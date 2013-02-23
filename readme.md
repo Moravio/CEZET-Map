@@ -3,7 +3,7 @@ Mapa ČR jako vektorové písmo
 
 ## Odkazy
 
-[Demo](http://www.cezetmap.cz/cezetmap/index.html), [Github](https://github.com/Moravio/CEZET-Map), [Email](mailto:cezetmap@moravio.com)
+[Demo](http://www.cezetmap.cz/cezetmap/demo/index.html), [Github](https://github.com/Moravio/CEZET-Map), [Email](mailto:cezetmap@moravio.com)
 
 ## Co to vlastně je?
 CEZET Map je znakový font, který umožnuje jednoduše vytvořit mapu České Republiky za použití HTML a CSS. Každý kraj může být stylován zvlášť pomocí CSS stylů. 

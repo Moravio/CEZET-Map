@@ -5,7 +5,7 @@
 
 @font-face {
 	font-family: 'cezetmap';
-	src:url('/cezetmap/font/cezetmap.eot');
+	src:url('font/cezetmap.eot');
 }
 @font-face {
 	font-family: 'cezetmap';
@@ -20,6 +20,7 @@
 	width: 370px;
 	/* 370 / 1.734 = 213.39 */
 	height: 213px;
+	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
 	font-family: "cezetmap";
@@ -38,6 +39,8 @@
 	-ms-font-feature-settings: "liga", "dlig";	
 }
 
+.cezetmap a{ color: inherit; }
+
 .cezetmap .kraje,
 .cezetmap .regions,
 .cezetmap .kraj,
@@ -53,6 +56,13 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	-webkit-transition: all .3s ease-in;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* ============================== */

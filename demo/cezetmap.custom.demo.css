@@ -1,0 +1,47 @@
+
+/* ============================== */
+/* obecne nastaveni mapy          */
+/* ============================== */
+
+.cezetmap{
+	/* width & height ratio: 1.734 */
+	width: 800px;
+	/* 370 / 1.734 = 213.39 */
+	height: 461px;
+	/* musi byt stejne jako sirka (width) elementu cezetmap */
+	font-size: 800px;
+}
+
+/* ============================== */
+/* stylovani stranky              */
+/* ============================== */
+
+body{
+	background-color: #273248;
+}
+
+.cezetmap_area{
+	width: 800px;
+	padding: 30px;
+	margin: 0 auto;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #fff;
+}
+
+.project_info{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 12px;
+	margin: 20px 0;
+	color: #6695C2;
+}
+
+.project_info a{
+	color: white;
+	text-decoration: none;
+}
