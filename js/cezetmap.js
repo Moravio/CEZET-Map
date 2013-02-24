@@ -72,6 +72,8 @@ $(".cezetmap")
    	for( var i=0; i<cezetmap.length; i++ ){
 		if(isPointInPoly(cezetmap[i], {x: perX, y: perY})){
 			krajID = i;
+			// zmena kurzoru nad oblasti
+			$(".cezetmap").css("cursor", "pointer");
 			// jen pokud se kraj zmenil
 			if( krajID != krajOld ){
 				$(".cezetmap .kraj").removeClass("kraj_hover");
@@ -79,6 +81,10 @@ $(".cezetmap")
 				krajOld = krajID;
 			}
 			break;
+		}
+		else{
+			// zmena kurzoru mimo oblasti
+			$(".cezetmap").css("cursor", "default");
 		}
    	}
 })

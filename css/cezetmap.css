@@ -83,6 +83,33 @@
 	}
 }
 
+.cezetmap .zlinsky:before, .cezetmap .moravskoslezsky:before, .cezetmap .jihomoravsky:before, .cezetmap .olomoucky:before,
+.cezetmap .vysocina:before, .cezetmap .pardubicky:before, .cezetmap .kralovehradecky:before, .cezetmap .jihocesky:before,
+.cezetmap .hlavni-mesto-praha:before, .cezetmap .stredocesky:before, .cezetmap .liberecky:before, .cezetmap .plzensky:before,
+.cezetmap .ustecky:before, .cezetmap .karlovarsky:before{
+	font-family: 'cezetmap';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.cezetmap .zlinsky:before				{ content: "a"; }		
+.cezetmap .moravskoslezsky:before		{ content: "b"; }
+.cezetmap .jihomoravsky:before			{ content: "c"; }
+.cezetmap .olomoucky:before				{ content: "d"; }
+.cezetmap .vysocina:before				{ content: "e"; }
+.cezetmap .pardubicky:before			{ content: "f"; }
+.cezetmap .kralovehradecky:before		{ content: "g"; }
+.cezetmap .jihocesky:before				{ content: "h"; }
+.cezetmap .hlavni-mesto-praha:before	{ content: "i"; }
+.cezetmap .stredocesky:before			{ content: "j"; }
+.cezetmap .liberecky:before				{ content: "k"; }
+.cezetmap .plzensky:before				{ content: "l"; }
+.cezetmap .ustecky:before				{ content: "m"; }
+.cezetmap .karlovarsky:before			{ content: "n"; }
+
 /* ============================== */
 /* nastaveni mest                 */
 /* ============================== */

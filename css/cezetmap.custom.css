@@ -19,20 +19,20 @@
 /* nastaveni kraju                */
 /* ============================== */
 
-.cezetmap .hlavni-mesto-praha 	{ color: #59C6F5; }
-.cezetmap .stredocesky			{ color: #90D9F8; }
-.cezetmap .jihocesky			{ color: #7DD2F7; }
-.cezetmap .plzensky				{ color: #59C6F5; }
-.cezetmap .karlovarsky			{ color: #59C6F5; }
-.cezetmap .ustecky				{ color: #90D9F8; }
-.cezetmap .liberecky			{ color: #7DD2F7; }
-.cezetmap .kralovehradecky		{ color: #59C6F5; }
-.cezetmap .pardubicky			{ color: #59C6F5; }
-.cezetmap .vysocina				{ color: #90D9F8; }
+.cezetmap .zlinsky				{ color: #59C6F5; }
+.cezetmap .moravskoslezsky		{ color: #90D9F8; }
 .cezetmap .jihomoravsky			{ color: #7DD2F7; }
 .cezetmap .olomoucky			{ color: #59C6F5; }
-.cezetmap .moravskoslezsky		{ color: #59C6F5; }
-.cezetmap .zlinsky				{ color: #90D9F8; }
+.cezetmap .vysocina				{ color: #59C6F5; }
+.cezetmap .pardubicky			{ color: #90D9F8; }
+.cezetmap .kralovehradecky		{ color: #7DD2F7; }
+.cezetmap .jihocesky			{ color: #59C6F5; }
+.cezetmap .hlavni-mesto-praha	{ color: #59C6F5; }
+.cezetmap .stredocesky			{ color: #90D9F8; }
+.cezetmap .liberecky			{ color: #7DD2F7; }
+.cezetmap .plzensky				{ color: #59C6F5; }
+.cezetmap .ustecky				{ color: #59C6F5; }
+.cezetmap .karlovarsky			{ color: #90D9F8; }
 
 .cezetmap .kraj_hover{
 	color: #FF424F;
@@ -126,8 +126,7 @@
   100%	{ opacity: .5; }
 }
 
-.cezetmap .mesto.animate,
-.cezetmap .city.animate{
+.cezetmap .mesto.animate{
 	opacity: .5;
 	-webkit-animation: cezetmap_animate 5s infinite; /* Safari 4+ */
 	-moz-animation:    cezetmap_animate 5s infinite; /* Fx 5+ */
