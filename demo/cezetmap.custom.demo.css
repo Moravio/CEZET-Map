@@ -9,9 +9,10 @@
 .cezetmap{
 	/* width & height ratio: 1.734 */
 	width: 800px;
-	/* 370 / 1.734 = 213.39 */
 	height: 461px;
-	/* musi byt stejne jako sirka (width) elementu cezetmap */
+}
+
+.cezetmap .kraje{
 	font-size: 800px;
 }
 

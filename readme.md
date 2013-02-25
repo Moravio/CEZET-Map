@@ -7,6 +7,11 @@ Mapa ČR jako vektorové písmo
 
 ## Changelog (Hlavní změny)
 
+### v2.1
+
+- Oprava rozměrů písma
+- Oprava pozicovaní krajů
+
 ### v2.0
 
 - Lepší přístupnost a použitelnost
