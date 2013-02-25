@@ -140,7 +140,7 @@ noindex:-o-prefocus, .cezetmap .kraj {
 .cezetmap .mesto_hover:before{
 	display: block;
 	position: absolute;
-	font-size: 0;
+	/*font-size: 0;*/
 	border-radius: 100%;
 }
 
