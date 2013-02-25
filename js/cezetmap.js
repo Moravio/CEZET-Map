@@ -1,3 +1,6 @@
+/* CEZET Map v2.0		          */
+/* 24.2.2013 (c) Moravio.com 	  */
+/* Licence CC BY 				  */
 
 $(document).ready(function(){		
 
@@ -132,6 +135,16 @@ $(".cezetmap .kraj a").click(function(){
 /* ============================== */
 /* udalosti po kliknuti na mesto  */
 /* ============================== */
+
+$(".cezetmap .mesto").hover(
+	function(){
+		$(".cezetmap .mesto").removeClass("mesto_hover");
+		$(this).addClass("mesto_hover");		
+	},
+	function(){
+		$(".cezetmap .mesto").removeClass("mesto_hover");		
+	}
+);
 
 $(".cezetmap .mesto a").click(function(){
 	var $this = $(this);

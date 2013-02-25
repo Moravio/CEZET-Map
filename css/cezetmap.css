@@ -1,3 +1,6 @@
+/* CEZET Map v2.0		          */
+/* 24.2.2013 (c) Moravio.com 	  */
+/* Licence CC BY 				  */
 
 /* ============================== */
 /* obecne nastaveni mapy          */
@@ -27,7 +30,6 @@
 	font-weight: normal; 
 	font-style: normal; 
 	font-size: 370px;
-	line-height: 1em;
 
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
@@ -53,7 +55,7 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	-webkit-transition: color .3s ease-in;
+	-webkit-transition: color .1s ease-in;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -72,15 +74,30 @@
 }
 
 .cezetmap .kraj{
-	top: -37.8%;
-	*top: -23.8%;
+	top: -45.8%;
+}
+
+/* opera hack */
+noindex:-o-prefocus, .cezetmap .kraj {
+  top: -27.4%;
 }
 
 /* IE 9 hack */
 @media all and (min-width:0) {
 	.cezetmap .kraj{
 		top: -29.8% \0/;
+		line-height: normal;
 	}
+}
+
+/* IE 8 hack */
+.cezetmap .kraj{
+	top: -37.8%\9;
+}
+
+/* IE 7 hack */
+.cezetmap .kraj{
+	*top: -33.5%;
 }
 
 .cezetmap .zlinsky:before, .cezetmap .moravskoslezsky:before, .cezetmap .jihomoravsky:before, .cezetmap .olomoucky:before,
@@ -119,7 +136,8 @@
 }
 
 .cezetmap .mesto,
-.cezetmap .mesto:before{
+.cezetmap .mesto_active:before,
+.cezetmap .mesto_hover:before{
 	display: block;
 	position: absolute;
 	font-size: 0;
@@ -136,7 +154,8 @@
 	z-index: 900;
 }
 
-.cezetmap .mesto:before{
+.cezetmap .mesto_active:before,
+.cezetmap .mesto_hover:before{
 	content: "";
 	width: 16px;
 	height: 16px;

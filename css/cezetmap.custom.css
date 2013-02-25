@@ -1,3 +1,6 @@
+/* CEZET Map v2.0		          */
+/* 24.2.2013 (c) Moravio.com 	  */
+/* Licence CC BY 				  */
 
 /* ============================== */
 /* obecne nastaveni mapy          */
@@ -35,11 +38,11 @@
 .cezetmap .karlovarsky			{ color: #90D9F8; }
 
 .cezetmap .kraj_hover{
-	color: #FF424F;
+	color: #ff4354;
 }
 
 .cezetmap .kraj_active{
-	color: #273248;
+	color: #138cc6;
 }
 
 /* ============================== */
@@ -54,15 +57,11 @@
 	background: white;
 }
 
-.cezetmap .mesto:before{
+.cezetmap .mesto_active:before{
 	width: 16px;
 	height: 16px;
 	margin-left: -5px;
 	margin-top: -5px;
-}
-
-.cezetmap .mesto_active{
-	background-color: #FF424F;
 }
 
 /* ============================== */
