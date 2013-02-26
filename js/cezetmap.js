@@ -93,6 +93,7 @@ $(".cezetmap")
 })
 // opusteni mapy
 .mouseleave(function(e){
+	krajOld = -1;
 	$(".cezetmap .kraj").removeClass("kraj_hover");
 })
 // kliknuti na kraj
