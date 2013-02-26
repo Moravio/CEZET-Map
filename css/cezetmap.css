@@ -1,5 +1,5 @@
-/* CEZET Map v2.0		          */
-/* 24.2.2013 (c) Moravio.com 	  */
+/* CEZET Map v2.1		          */
+/* 26.2.2013 (c) Moravio.com 	  */
 /* Licence CC BY 				  */
 
 /* ============================== */
@@ -89,7 +89,7 @@
 	font-style: normal;
 	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
-	line-height: 1;
+	line-height: 1 !important;
 }
 
 .cezetmap .zlinsky:before				{ content: "a"; }		

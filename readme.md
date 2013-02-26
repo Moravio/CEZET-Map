@@ -1,4 +1,4 @@
-# CEZET Map v2.0
+# CEZET Map v2.1
 Mapa ČR jako vektorové písmo
 
 ## Odkazy

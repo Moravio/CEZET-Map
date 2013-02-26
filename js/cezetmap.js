@@ -1,5 +1,5 @@
-/* CEZET Map v2.0		          */
-/* 24.2.2013 (c) Moravio.com 	  */
+/* CEZET Map v2.1		          */
+/* 26.2.2013 (c) Moravio.com 	  */
 /* Licence CC BY 				  */
 
 $(document).ready(function(){		
@@ -96,6 +96,7 @@ $(".cezetmap")
 })
 // opusteni mapy
 .mouseleave(function(e){
+	krajOld = -1;
 	$(".cezetmap .kraj").removeClass("kraj_hover");
 })
 // kliknuti na kraj
