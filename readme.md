@@ -11,6 +11,7 @@ Mapa ČR jako vektorové písmo
 
 - Oprava rozměrů písma
 - Oprava pozicovaní krajů
+- Rozhraní pro generovaní bodů zájmů (demo/index.html)
 
 ### v2.0
 

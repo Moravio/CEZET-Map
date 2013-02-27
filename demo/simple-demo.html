@@ -17,12 +17,6 @@
 		<p>Ukázkový příklad využití vektorového fontu <a href="/">CEZET Map</a></p>
 	</div>
 
-	<div class="cezetmap_code">
-		<p>Kliknutím do mapy získate procentuální souřadnice vašeho bodu zájmu.</p>
-		<code>.<span class="class_name" contenteditable="true" title="Kliknutím přejmenujete bod zájmu">vas-bod-zajmu</span> { left: <span class="pos_left">0</span>%; top: <span class="pos_top">0</span>%; }</code>
-		<p>Pokud lokalizujete město, které chybí v naší databází, prosím <a href="mailto:cezetmap@moravio.com">pošlete nám vygenerovaný kód</a> s krátkým popiskem<br />a my tento bod zařadíme do seznamu oficiálních bodů CEZET Map.</p>
-	</div>
-
 	<div class="cezetmap_area">
 		<div class="cezetmap">
 			<ul class="kraje">
@@ -81,26 +75,6 @@
 	<script>window.jQuery || document.write('<script src="../js/jquery-1.9.1.min.js"><\/script>')</script>
 	<!--[if lt IE 8]> <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script> <![endif]-->
 	<script src="../js/cezetmap.js"></script>
-
-	<script>
-	var cezetmap_width = parseInt( $(".cezetmap").css("width") );
-	var cezetmap_height = parseInt( $(".cezetmap").css("height") );
-
-	$(".cezetmap").click(function(e){
-		var parentOffset = $(this).offset();
-
-		// zjisteni absolutnich souradnic
-   		var absX = e.pageX - parentOffset.left;
-   		var absY = e.pageY - parentOffset.top;	
-
-   		// zjisteni procentualnich souradnic
-   		var perX = (absX / cezetmap_width) * 100;
-   		var perY = (absY / cezetmap_height) * 100;
-
-   		$(".pos_left").text( perX );
-   		$(".pos_top").text( perY );
-   	});
-	</script>	
 
 
 </body>

@@ -1,5 +1,5 @@
-/* CEZET Map v2.0		          */
-/* 24.2.2013 (c) Moravio.com 	  */
+/* CEZET Map v2.1		          */
+/* 26.2.2013 (c) Moravio.com 	  */
 /* Licence CC BY 				  */
 
 /* ============================== */
@@ -22,6 +22,7 @@
 
 body{
 	background-color: #273248;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .cezetmap_area{
@@ -35,10 +36,37 @@ body{
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
 	background-color: #fff;
+	margin-bottom: 25px;
+}
+
+.cezetmap_code{
+	width: 800px;
+	padding: 15px 30px;
+	margin: 0 auto;
+	font-size: 11px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #fff;
+	margin-bottom: 25px;
+	line-height: 1.6em;
+}
+
+.cezetmap_code a{
+	color: #FF4250;
+}
+
+.cezetmap_code code{
+	display: block;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	margin: 15px 0;
 }
 
 .project_info{
-	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	font-size: 12px;
 	margin: 20px 0;
@@ -48,4 +76,13 @@ body{
 .project_info a{
 	color: white;
 	text-decoration: none;
+}
+
+/* ============================== */
+/* vypis souradnic 	              */
+/* ============================== */
+
+.class_name{
+	color: #008EC5;
+	border-bottom: 1px dotted silver;
 }
