@@ -12,6 +12,7 @@ Mapa ČR jako vektorové písmo
 - Oprava rozměrů písma
 - Oprava pozicovaní krajů
 - Rozhraní pro generovaní bodů zájmů (demo/index.html)
+- Rozšířená databáze měst (110 měst)
 
 ### v2.0
 

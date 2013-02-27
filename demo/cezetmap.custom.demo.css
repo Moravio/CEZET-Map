@@ -29,6 +29,7 @@ body{
 	width: 800px;
 	padding: 30px;
 	margin: 0 auto;
+	position: relative;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
@@ -85,4 +86,28 @@ body{
 .class_name{
 	color: #008EC5;
 	border-bottom: 1px dotted silver;
+}
+
+/* ============================== */
+/* mapove podklady 	              */
+/* ============================== */
+
+.toggle_map{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 999;
+	padding: 5px;
+	background: white;
+	color: #FF4250;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.cezetmap_area.withMap{
+	background: transparent url("sourcemap.jpg") no-repeat -3px -5px;
+}
+
+.cezetmap_area.withMap .cezetmap .kraje{
+	opacity: .5;
 }

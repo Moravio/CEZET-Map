@@ -131,7 +131,8 @@ $(".cezetmap .kraj a").click(function(){
 	
 	$(".cezetmap .kraj").removeClass("kraj_active");
 	$this.closest(".kraj").addClass("kraj_active");
-	console.log( $this.attr("href") );
+	//console.log( $this.attr("href") );
+	console.log( $this.text() );
 
 	return false;
 });
@@ -143,19 +144,20 @@ $(".cezetmap .kraj a").click(function(){
 $(".cezetmap .mesto").hover(
 	function(){
 		$(".cezetmap .mesto").removeClass("mesto_hover");
-		$(this).addClass("mesto_hover");		
+		$(this).addClass("mesto_hover");	
 	},
 	function(){
 		$(".cezetmap .mesto").removeClass("mesto_hover");		
 	}
 );
 
-$(".cezetmap .mesto a").click(function(){
+$(".cezetmap .mesto").click(function(){
 	var $this = $(this);
 	
 	$(".cezetmap .mesto").removeClass("mesto_active");
 	$this.closest(".mesto").addClass("mesto_active");
-	console.log( $this.attr("href") );
+	// vypise nazev mesta
+	console.log( $this.text() );
 
 	return false;
 });
