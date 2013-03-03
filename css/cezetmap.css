@@ -69,6 +69,7 @@
 	-moz-font-feature-settings: "liga=1";
 	-ms-font-feature-settings: "liga" 1;
 	-ms-font-feature-settings: "liga", "dlig";	
+	z-index: 700;
 }
 
 .cezetmap .kraj{
@@ -130,7 +131,7 @@
 /* ============================== */
 
 .cezetmap .mesta{
-	z-index: 500;
+	z-index: 800;
 }
 
 .cezetmap .mesto,
