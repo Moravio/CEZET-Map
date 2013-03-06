@@ -131,9 +131,6 @@ $(".cezetmap .kraj a").click(function(){
 	
 	$(".cezetmap .kraj").removeClass("kraj_active");
 	$this.closest(".kraj").addClass("kraj_active");
-	//console.log( $this.attr("href") );
-	console.log( $this.text() );
-
 	return false;
 });
 
@@ -156,9 +153,6 @@ $(".cezetmap .mesto").click(function(){
 	
 	$(".cezetmap .mesto").removeClass("mesto_active");
 	$this.closest(".mesto").addClass("mesto_active");
-	// vypise nazev mesta
-	console.log( $this.text() );
-
 	return false;
 });
 
