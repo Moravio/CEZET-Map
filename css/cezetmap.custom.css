@@ -1,5 +1,5 @@
-/* CEZET Map v2.1		          */
-/* 26.2.2013 (c) Moravio.com 	  */
+/* CEZET Map v2.2		          */
+/* 8.3.2013 (c) Moravio.com 	  */
 /* Licence CC BY 				  */
 
 /* ============================== */
@@ -61,4 +61,47 @@
 	margin-left: -5px;
 	margin-top: -5px;
 	border: 1px solid white;
+}
+
+/* ============================== */
+/* nastaveni tooltipu pro mesta   */
+/* ============================== */
+
+.cezetmap .mesto_env{
+	display: none;
+	-moz-border-radius: 11px / 10px;
+	-webkit-border-radius: 11px / 10px;
+	border-radius: 11px / 10px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: rgba(34,44,64,.8);
+
+	font-size: 12px;
+	color: white;
+	width: 100px;
+	padding: 5px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -55px;
+	text-align: center;
+	z-index: 999;
+}
+
+.cezetmap .mesto_env:before{
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 8px;
+	height: 4px;
+	background: url("img/tooltip_arrow.png") no-repeat 0 0;
+	position: absolute;
+	left: 50%;
+	margin-left: -4px;
+	bottom: -4px;
+}
+
+.cezetmap .mesto_hover .mesto_env{
+	display: block;
 }
