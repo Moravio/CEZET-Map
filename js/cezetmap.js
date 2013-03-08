@@ -1,5 +1,5 @@
-/* CEZET Map v2.1		          */
-/* 26.2.2013 (c) Moravio.com 	  */
+/* CEZET Map v2.2		          */
+/* 8.3.2013 (c) Moravio.com 	  */
 /* Licence CC BY 				  */
 
 $(document).ready(function(){		
@@ -60,6 +60,8 @@ var krajOld = -1;
 /* udalosti nad mapou             */
 /* ============================== */
 
+$(".cezetmap").css("overflow","visible");
+
 $(".cezetmap")
 // simulace hover stavu nad jednotlivymi kraji
 .mousemove(function(e){
@@ -99,7 +101,7 @@ $(".cezetmap")
 	krajOld = -1;
 	$(".cezetmap .kraj").removeClass("kraj_hover");
 })
-// kliknuti na kraj
+// kliknuti na mapu
 .click(function(e){
 	parentOffset = $(this).offset();
 
@@ -126,17 +128,30 @@ $(".cezetmap")
 /* udalosti po kliknuti na kraj   */
 /* ============================== */
 
+// obaleni nazvu kraje - nutne pro stylovani
+$(".cezetmap .kraj").wrapInner('<span class="kraj_env" />');
+
 $(".cezetmap .kraj a").click(function(){
 	var $this = $(this);
+	var thisLink = $this.attr("href");
 	
 	$(".cezetmap .kraj").removeClass("kraj_active");
 	$this.closest(".kraj").addClass("kraj_active");
+
+	// vypsani informaci do konzole
+	if( thisLink != undefined ){
+		console.log(thisLink);
+	}
+
 	return false;
 });
 
 /* ============================== */
 /* udalosti po kliknuti na mesto  */
 /* ============================== */
+
+// obaleni nazvu mesta - nutne pro stylovani
+$(".cezetmap .mesto").wrapInner('<span class="mesto_env" />');
 
 $(".cezetmap .mesto").hover(
 	function(){
@@ -150,9 +165,16 @@ $(".cezetmap .mesto").hover(
 
 $(".cezetmap .mesto").click(function(){
 	var $this = $(this);
+	var thisLink = $this.find("a").attr("href");
 	
 	$(".cezetmap .mesto").removeClass("mesto_active");
 	$this.closest(".mesto").addClass("mesto_active");
+	
+	// vypsani informaci do konzole
+	if( thisLink != undefined ){
+		console.log(thisLink);
+	}
+
 	return false;
 });
 

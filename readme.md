@@ -1,4 +1,4 @@
-# CEZET Map v2.1
+# CEZET Map v2.2
 Mapa ČR jako vektorové písmo
 
 ## Odkazy
@@ -7,6 +7,10 @@ Mapa ČR jako vektorové písmo
 [Ukázkový příklad](http://www.cezetmap.cz/cezetmap/demo/index.html), [Github](https://github.com/Moravio/CEZET-Map), [Email](mailto:cezetmap@moravio.com)
 
 ## Changelog (Hlavní změny)
+
+### v2.2
+
+- Tooltip s názvem města
 
 ### v2.1
 
