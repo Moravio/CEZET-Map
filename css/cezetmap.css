@@ -177,7 +177,7 @@
 }
 
 /* ==============================
- * zakladni pozice vybranych mest
+ * Mesta CR
  * ==============================
  */
 
@@ -292,4 +292,11 @@
 .cezetmap .jicin                { left: 48.5%; top: 24.772236921264916%; }
 .cezetmap .nachod               { left: 60.25%; top: 25.856835619746477%; }
 .cezetmap .trutnov              { left: 56.25%; top: 19.566163168553416%; }
+
+/* ==============================
+ * Mesta CR - pridane uzivateli
+ * ==============================
+ */
+
 .cezetmap .namest-nad-oslavou   { left: 59.25%; top: 71.36659436008676%; }
+.cezetmap .velke-prilepy        { left: 32.625%; top: 35.401301683934804%; }
