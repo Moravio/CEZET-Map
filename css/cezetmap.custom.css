@@ -1,10 +1,12 @@
-/* CEZET Map v2.2								*/
-/* 8.3.2013 (c) Moravio.com 		*/
-/* Licence CC BY 								*/
+/* CEZET Map v2.2
+ * 8.3.2013 (c) Moravio.com
+ * Licence CC BY
+ */
 
-/* ============================== */
-/* obecne nastaveni mapy 					*/
-/* ============================== */
+/* ==============================
+ * obecne nastaveni mapy
+ * ============================== 
+ */
 
 .cezetmap{
 	/* width & height ratio: 1.734 */
@@ -18,31 +20,33 @@
 	font-size: 370px;	
 }
 
-/* ============================== */
-/* nastaveni kraju 							  */
-/* ============================== */
+/* ==============================
+ * nastaveni kraju
+ * ==============================
+ */
 
-.cezetmap .zlinsky						{ color: #59C6F5; }
-.cezetmap .moravskoslezsky		{ color: #90D9F8; }
-.cezetmap .jihomoravsky				{ color: #7DD2F7; }
-.cezetmap .olomoucky					{ color: #59C6F5; }
-.cezetmap .vysocina						{ color: #59C6F5; }
-.cezetmap .pardubicky					{ color: #90D9F8; }
-.cezetmap .kralovehradecky		{ color: #7DD2F7; }
-.cezetmap .jihocesky					{ color: #59C6F5; }
-.cezetmap .hlavni-mesto-praha	{ color: #59C6F5; }
-.cezetmap .stredocesky				{ color: #90D9F8; }
-.cezetmap .liberecky					{ color: #7DD2F7; }
-.cezetmap .plzensky						{ color: #59C6F5; }
-.cezetmap .ustecky						{ color: #59C6F5; }
-.cezetmap .karlovarsky				{ color: #90D9F8; }
+.cezetmap .zlinsky                   { color: #59C6F5; }
+.cezetmap .moravskoslezsky           { color: #90D9F8; }
+.cezetmap .jihomoravsky              { color: #7DD2F7; }
+.cezetmap .olomoucky                 { color: #59C6F5; }
+.cezetmap .vysocina	                 { color: #59C6F5; }
+.cezetmap .pardubicky                { color: #90D9F8; }
+.cezetmap .kralovehradecky           { color: #7DD2F7; }
+.cezetmap .jihocesky                 { color: #59C6F5; }
+.cezetmap .hlavni-mesto-praha        { color: #59C6F5; }
+.cezetmap .stredocesky               { color: #90D9F8; }
+.cezetmap .liberecky                 { color: #7DD2F7; }
+.cezetmap .plzensky                  { color: #59C6F5; }
+.cezetmap .ustecky                   { color: #59C6F5; }
+.cezetmap .karlovarsky               { color: #90D9F8; }
 
-.cezetmap .kraj_hover					{ color: #ff4354; }
-.cezetmap .kraj_active				{ color: #138cc6; }
+.cezetmap .kraj_hover                { color: #ff4354; }
+.cezetmap .kraj_active               { color: #138cc6; }
 
-/* ============================== */
-/* nastaveni mest									*/
-/* ============================== */
+/* ==============================
+ * nastaveni mest
+ * ==============================
+ */
 
 /* znacka pro aktivni mesto */
 .cezetmap .mesto{
@@ -63,9 +67,10 @@
 	border: 1px solid white;
 }
 
-/* ============================== */
-/* nastaveni tooltipu pro mesta	  */
-/* ============================== */
+/* ==============================
+ * nastaveni tooltipu pro mesta
+ * ==============================
+ */
 
 .cezetmap .mesto_env{
 	display: none;
