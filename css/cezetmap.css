@@ -32,7 +32,7 @@
 	height: 213px;
 	margin: 0 auto;
 	position: relative;	
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 .cezetmap .kraje,
@@ -64,6 +64,8 @@
 	font-weight: normal; 
 	font-style: normal; 
 	font-size: 370px;
+	line-height: 1em;
+	line-height: normal\9;
 
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
@@ -97,7 +99,6 @@
 	font-style: normal;
 	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
-	line-height: 1 !important;
 }
 
 .cezetmap .zlinsky:before            { content: "a"; }		
