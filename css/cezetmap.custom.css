@@ -98,13 +98,15 @@
 	content: " ";
 	display: block;
 	position: absolute;
-	width: 8px;
-	height: 4px;
-	background: url("img/tooltip_arrow.png") no-repeat 0 0;
+	width: 0px;
+	height: 0px;
 	position: absolute;
 	left: 50%;
-	margin-left: -4px;
-	bottom: -4px;
+	margin-left: -6px;
+	top: 100%;
+	border: solid transparent;
+	border-top-color: rgba(34,44,64,.8);
+	border-width: 6px;
 }
 
 .cezetmap .mesto_hover .mesto_env{
