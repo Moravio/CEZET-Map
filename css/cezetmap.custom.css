@@ -3,11 +3,6 @@
  * Licence CC BY
  */
 
-/* ==============================
- * obecne nastaveni mapy
- * ============================== 
- */
-
 .cezetmap{
 	/* width & height ratio: 1.734 */
 	width: 370px;
@@ -18,97 +13,4 @@
 .cezetmap .kraje{
 	/* musi byt stejne jako sirka (width) elementu cezetmap */
 	font-size: 370px;	
-}
-
-/* ==============================
- * nastaveni kraju
- * ==============================
- */
-
-.cezetmap .zlinsky                   { color: #59C6F5; }
-.cezetmap .moravskoslezsky           { color: #90D9F8; }
-.cezetmap .jihomoravsky              { color: #7DD2F7; }
-.cezetmap .olomoucky                 { color: #59C6F5; }
-.cezetmap .vysocina	                 { color: #59C6F5; }
-.cezetmap .pardubicky                { color: #90D9F8; }
-.cezetmap .kralovehradecky           { color: #7DD2F7; }
-.cezetmap .jihocesky                 { color: #59C6F5; }
-.cezetmap .hlavni-mesto-praha        { color: #59C6F5; }
-.cezetmap .stredocesky               { color: #90D9F8; }
-.cezetmap .liberecky                 { color: #7DD2F7; }
-.cezetmap .plzensky                  { color: #59C6F5; }
-.cezetmap .ustecky                   { color: #59C6F5; }
-.cezetmap .karlovarsky               { color: #90D9F8; }
-
-.cezetmap .kraj_hover                { color: #ff4354; }
-.cezetmap .kraj_active               { color: #138cc6; }
-
-/* ==============================
- * nastaveni mest
- * ==============================
- */
-
-/* znacka pro aktivni mesto */
-.cezetmap .mesto{
-	width: 8px;
-	height: 8px;
-	margin-left: -4px;
-	margin-top: -4px;	
-	background: white;
-}
-
-/* okraj znacky pro aktivni mesto */
-.cezetmap .mesto_active:before,
-.cezetmap .mesto_hover:before{
-	width: 16px;
-	height: 16px;
-	margin-left: -5px;
-	margin-top: -5px;
-	border: 1px solid white;
-}
-
-/* ==============================
- * nastaveni tooltipu pro mesta
- * ==============================
- */
-
-.cezetmap .mesto_env{
-	display: none;
-	-moz-border-radius: 11px / 10px;
-	-webkit-border-radius: 11px / 10px;
-	border-radius: 11px / 10px;
-	-moz-background-clip: padding;
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box;
-	background-color: rgba(34,44,64,.8);
-
-	font-size: 12px;
-	color: white;
-	width: 100px;
-	padding: 5px;
-	position: absolute;
-	bottom: 10px;
-	left: 50%;
-	margin-left: -55px;
-	text-align: center;
-	z-index: 999;
-}
-
-.cezetmap .mesto_env:before{
-	content: " ";
-	display: block;
-	position: absolute;
-	width: 0px;
-	height: 0px;
-	position: absolute;
-	left: 50%;
-	margin-left: -6px;
-	top: 100%;
-	border: solid transparent;
-	border-top-color: rgba(34,44,64,.8);
-	border-width: 6px;
-}
-
-.cezetmap .mesto_hover .mesto_env{
-	display: block;
 }
