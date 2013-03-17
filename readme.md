@@ -10,10 +10,9 @@ Mapa ČR jako vektorové písmo
 
 ### v2.3
 
-.scss -> .css
-
-- .scss (jednodušší implementace do SASS projektů)
-- .css (minifikovaná verze)
+- Optimalizace velikosti JS a CSS
+- SCSS (jednodušší implementace do SASS projektů)
+- CSS (minifikovaná verze)
 
 ### v2.2
 
