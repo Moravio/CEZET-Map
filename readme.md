@@ -8,6 +8,13 @@ Mapa ČR jako vektorové písmo
 
 ## Changelog (Hlavní změny)
 
+### v2.3
+
+.scss -> .css
+
+- .scss (jednodušší implementace do SASS projektů)
+- .css (minifikovaná verze)
+
 ### v2.2
 
 - Tooltip s názvem města

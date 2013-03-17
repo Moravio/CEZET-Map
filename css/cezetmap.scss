@@ -1,0 +1,356 @@
+/* CEZET Map v2.3
+ * 8.3.2013 (c) Moravio.com
+ * Licence CC BY
+ */
+
+/* ==============================
+ * obecne nastaveni mapy
+ * ============================== 
+ */
+
+@font-face {
+	font-family: 'cezetmap';
+	src:url('font/cezetmap.eot');
+	src:url('font/cezetmap.eot?#iefix') format('embedded-opentype'),
+		url('font/cezetmap.woff') format('woff'),
+		url('font/cezetmap.ttf') format('truetype'),
+		url('font/cezetmap.svg#cezetmap') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ==============================
+ * zakladni nastaveni mapy
+ * ============================== 
+ */
+
+.cezetmap{
+	/* width & height ratio: 1.734 */
+	/* 370 / 1.734 = 213.39 */
+
+	width: 370px;
+	height: 213px;
+	margin: 0 auto;
+	position: relative;	
+	overflow: hidden;
+}
+
+.cezetmap .kraje,
+.cezetmap .mesta{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* ==============================
+ * nastaveni kraju
+ * ============================== 
+ */
+
+.cezetmap .kraje{
+	font-family: "cezetmap";
+	font-weight: normal; 
+	font-style: normal; 
+	font-size: 370px;
+	line-height: 1em;
+
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "liga=1";
+	-ms-font-feature-settings: "liga" 1;
+	-ms-font-feature-settings: "liga", "dlig";	
+	z-index: 700;
+}
+
+/* IE9, IE10 hack */
+@media screen and (min-width:0\0) {
+	.cezetmap .kraje{
+		line-height: normal;
+	}
+}
+
+.cezetmap .kraj{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.cezetmap .kraj_env{
+	display: none;
+}
+
+.cezetmap .zlinsky:before, .cezetmap .moravskoslezsky:before, .cezetmap .jihomoravsky:before, .cezetmap .olomoucky:before,
+.cezetmap .vysocina:before, .cezetmap .pardubicky:before, .cezetmap .kralovehradecky:before, .cezetmap .jihocesky:before,
+.cezetmap .hlavni-mesto-praha:before, .cezetmap .stredocesky:before, .cezetmap .liberecky:before, .cezetmap .plzensky:before,
+.cezetmap .ustecky:before, .cezetmap .karlovarsky:before{
+	font-family: 'cezetmap';
+	speak: none;
+	display: block;
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+.cezetmap .zlinsky:before            { content: "a"; }		
+.cezetmap .moravskoslezsky:before    { content: "b"; }
+.cezetmap .jihomoravsky:before       { content: "c"; }
+.cezetmap .olomoucky:before          { content: "d"; }
+.cezetmap .vysocina:before           { content: "e"; }
+.cezetmap .pardubicky:before         { content: "f"; }
+.cezetmap .kralovehradecky:before    { content: "g"; }
+.cezetmap .jihocesky:before          { content: "h"; }
+.cezetmap .hlavni-mesto-praha:before { content: "i"; }
+.cezetmap .stredocesky:before        { content: "j"; }
+.cezetmap .liberecky:before          { content: "k"; }
+.cezetmap .plzensky:before           { content: "l"; }
+.cezetmap .ustecky:before            { content: "m"; }
+.cezetmap .karlovarsky:before        { content: "n"; }
+
+.cezetmap .zlinsky                   { color: #59C6F5; }
+.cezetmap .moravskoslezsky           { color: #90D9F8; }
+.cezetmap .jihomoravsky              { color: #7DD2F7; }
+.cezetmap .olomoucky                 { color: #59C6F5; }
+.cezetmap .vysocina                  { color: #59C6F5; }
+.cezetmap .pardubicky                { color: #90D9F8; }
+.cezetmap .kralovehradecky           { color: #7DD2F7; }
+.cezetmap .jihocesky                 { color: #59C6F5; }
+.cezetmap .hlavni-mesto-praha        { color: #59C6F5; }
+.cezetmap .stredocesky               { color: #90D9F8; }
+.cezetmap .liberecky                 { color: #7DD2F7; }
+.cezetmap .plzensky                  { color: #59C6F5; }
+.cezetmap .ustecky                   { color: #59C6F5; }
+.cezetmap .karlovarsky               { color: #90D9F8; }
+
+.cezetmap .kraj_hover                { color: #ff4354; }
+.cezetmap .kraj_active               { color: #138cc6; }
+
+/* ==============================
+ * nastaveni mest
+ * ==============================
+ */
+
+.cezetmap .mesta{
+	z-index: 800;
+}
+
+.cezetmap .mesto,
+.cezetmap .mesto_active:before,
+.cezetmap .mesto_hover:before{
+	display: block;
+	position: absolute;
+	font-size: 0;
+	border-radius: 100%;
+}
+
+.cezetmap .mesto{
+	width: 8px;
+	height: 8px;
+	margin-left: -4px;
+	margin-top: -4px;
+	background: white;
+	text-indent: 9999;
+}
+
+.cezetmap .mesto_active:before,
+.cezetmap .mesto_hover:before{
+	content: "";
+	width: 16px;
+	height: 16px;
+	margin-left: -5px;
+	margin-top: -5px;
+	border: 1px solid white;
+	z-index: 800;
+}
+
+.cezetmap .mesto a{
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+
+/* ==============================
+ * nastaveni tooltipu pro mesta
+ * ==============================
+ */
+
+.cezetmap .mesto_env{
+	display: none;
+	-moz-border-radius: 11px / 10px;
+	-webkit-border-radius: 11px / 10px;
+	border-radius: 11px / 10px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: rgba(34,44,64,.8);
+
+	font-size: 12px;
+	color: white;
+	width: 100px;
+	padding: 5px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -55px;
+	text-align: center;
+	z-index: 999;
+}
+
+.cezetmap .mesto_env:before{
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	left: 50%;
+	margin-left: -6px;
+	top: 100%;
+	border: solid transparent;
+	border-top-color: rgba(34,44,64,.8);
+	border-width: 6px;
+}
+
+.cezetmap .mesto_hover .mesto_env{
+	display: block;
+}
+
+/* ==============================
+ * Mesta CR
+ * ==============================
+ */
+
+.cezetmap .praha                { left: 35.1083591331269%; top: 38.3458646616541%; }
+.cezetmap .brno                 { left: 66.7492260061919%; top: 74.2212674543502%; }
+.cezetmap .ostrava              { left: 90.875%; top: 48.5900216919740%; }
+.cezetmap .plzen                { left: 18.5139318885449%; top: 52.4167561761547%; }
+.cezetmap .liberec              { left: 43.2198142414861%; top: 11.8152524167562%; }
+.cezetmap .olomouc              { left: 75.8513931888545%; top: 57.5725026852846%; }
+.cezetmap .usti-nad-labem       { left: 28.6687306501548%; top: 16.0042964554243%; }
+.cezetmap .hradec-kralove       { left: 54.8606811145511%; top: 34.3716433941998%; }
+.cezetmap .ceske-budejovice     { left: 35.375%; top: 81.5618221258135%; }
+.cezetmap .pardubice            { left: 53.9938080495356%; top: 41.3533834586466%; }
+.cezetmap .havirov              { left: 93.0030959752322%; top: 49.0870032223416%; }
+.cezetmap .zlin                 { left: 82.3529411764706%; top: 71.7508055853921%; }
+.cezetmap .kladno               { left: 29.4117647058824%; top: 36.5198711063373%; }
+.cezetmap .most                 { left: 22.6006191950464%; top: 22.4489795918367%; }
+.cezetmap .karvina              { left: 94.6130030959752%; top: 46.1868958109560%; }
+.cezetmap .opava                { left: 85.1393188854489%; top: 43.6090225563910%; }
+.cezetmap .frydek-mistek        { left: 91.8266253869969%; top: 53.2760472610097%; }
+.cezetmap .karlovy-vary         { left: 11.3931888544892%; top: 32.6530612244898%; }
+.cezetmap .jihlava              { left: 51.3931888544892%; top: 66.1654135338346%; }
+.cezetmap .teplice              { left: 25.7585139318885%; top: 17.1858216970999%; }
+.cezetmap .decin                { left: 31.5170278637771%; top: 11.3856068743287%; }
+.cezetmap .chomutov             { left: 19.5665634674923%; top: 24.0601503759398%; }
+.cezetmap .prerov               { left: 78.8854489164087%; top: 62.9430719656284%; }
+.cezetmap .jablonec-nad-nisou   { left: 45.0773993808050%; top: 13.6412459720730%; }
+.cezetmap .mlada-boleslav       { left: 41.1764705882353%; top: 26.5306122448980%; }
+.cezetmap .prostejov            { left: 73.8080495356037%; top: 62.4060150375940%; }
+.cezetmap .trebic               { left: 55.875%; top: 72.06074017506101%; }
+.cezetmap .ceska-lipa           { left: 35.9752321981424%; top: 15.0375939849624%; }
+.cezetmap .trinec               { left: 96.9040247678019%; top: 53.2760472610097%; }
+.cezetmap .tabor                { left: 37.2755417956656%; top: 65.5209452201933%; }
+.cezetmap .znojmo               { left: 58.375%; top: 86.33405639913232%; }
+.cezetmap .bruntal              { left: 79.25%; top: 42.0824295010846%;  }
+.cezetmap .vsetin               { left: 87%; top: 67.24511930585683%; }
+.cezetmap .valasske-mezirici    { left: 86.625%; top: 61.82212581344903%; }
+.cezetmap .uherske-hradiste     { left: 79.625%; top: 77.87418655097615%; }
+.cezetmap .uhersky-brod         { left: 82.125%; top: 80.4772234273319%;  }
+.cezetmap .kromeriz             { left: 78.25%; top: 69.41431670281996%; }
+.cezetmap .hranice              { left: 83.125%; top: 59.21908893709328%; }
+.cezetmap .sumperk              { left: 71.75%; top: 42.73318872017354%; }
+.cezetmap .zabreh-na-morave     { left: 70.5%; top: 46.85466377440347%; }
+.cezetmap .mohelnice            { left: 71.125%; top: 50.54229934924079%; }
+.cezetmap .krnov                { left: 82.625%; top: 39.26247288503254%; }
+.cezetmap .kyjov                { left: 74.125%; top: 80.26030368763557%; }
+.cezetmap .hodonin              { left: 74.125%; top: 85.90021691973969%; }
+.cezetmap .bucovice             { left: 72.375%; top: 74.62039045553145%; }
+.cezetmap .vyskov               { left: 72.5%; top: 69.84815618221259%; }
+.cezetmap .blansko              { left: 67.125%; top: 66.16052060737528%; }
+.cezetmap .boskovice            { left: 67.5%; top: 61.82212581344903%; }
+.cezetmap .hustopece            { left: 68.25%; top: 82.21258134490239%; }
+.cezetmap .ivancice             { left: 63%; top: 76.13882863340564%; }
+.cezetmap .svitavy              { left: 64.5%; top: 51.62689804772235%; }
+.cezetmap .ceska-trebova        { left: 64.375%; top: 45.33622559652928%; }
+.cezetmap .usti-nad-orlici      { left: 63.7499999999999%; top: 42.0824295010846%;  }
+.cezetmap .vysoke-myto          { left: 60.5%; top: 43.81778741865509%; }
+.cezetmap .hlinsko              { left: 56%; top: 50.97613882863341%; }
+.cezetmap .chrudim              { left: 54.75%; top: 44.46854663774403%; }
+.cezetmap .novy-jicin           { left: 87.25%; top: 57.9175704989154%;  }
+.cezetmap .as                   { left: 1.875%; top: 32.79826729002847%; }
+.cezetmap .cheb                 { left: 4.125%; top: 39.08893974122153%; }
+.cezetmap .sokolov              { left: 8.625%; top: 34.75054494729528%; }
+.cezetmap .ostrov               { left: 12.625%; top: 29.761390934280097%;}
+.cezetmap .marianske-lazne      { left: 9.375%; top: 42.77657531605884%; }
+.cezetmap .tachov               { left: 8.125%; top: 49.93492672603715%; }
+.cezetmap .domazlice            { left: 12.625%; top: 63.600870326904825%;}
+.cezetmap .klatovy              { left: 18%; top: 65.33622824447532%; }
+.cezetmap .susice               { left: 21.375%; top: 71.40998095597207%; }
+.cezetmap .spalene-porici       { left: 22.5%; top: 56.65943865662283%; }
+.cezetmap .rokycany             { left: 22.5%; top: 51.88720438330397%; }
+.cezetmap .vimperk              { left: 25%; top: 78.56833236595038%; }
+.cezetmap .prachatice           { left: 28.249999999999996%; top: 79.869850804128%; }
+.cezetmap .cesky-krumlov        { left: 32.875%; top: 87.46204169349919%; }
+.cezetmap .trebon               { left: 39.5%; top: 80.30369028352088%; }
+.cezetmap .jindrichuv-hradec    { left: 43.125%; top: 74.66377705141676%; }
+.cezetmap .sobeslav             { left: 38.75%; top: 70.54230199718681%; }
+.cezetmap .vodnany              { left: 31%; top: 74.88069679111307%; }
+.cezetmap .strakonice           { left: 27.250000000000004%; top: 70.542301997187%; }
+.cezetmap .pisek                { left: 30.5%; top: 69.02386381931264%; }
+.cezetmap .blatna               { left: 26.5%; top: 64.03470980629746%; }
+.cezetmap .dacice               { left: 49.5%; top: 77.2668139277725%;  }
+.cezetmap .moravske-budejovice  { left: 54.87499999999999%; top: 77.91757314686144%;}
+.cezetmap .telc                 { left: 49.625%; top: 73.14533887354257%; }
+.cezetmap .trest                { left: 50.125%; top: 69.45770329870527%; }
+.cezetmap .velke-mezirici       { left: 57.875%; top: 66.4208269429569%;  }
+.cezetmap .nove-mesto-na-morave { left: 58.875%; top: 58.61171631388964%; }
+.cezetmap .pelhrimov            { left: 46.375%; top: 64.03470980629746%; }
+.cezetmap .humpolec             { left: 48.125%; top: 59.91323475206751%; }
+.cezetmap .havlickuv-brod       { left: 51.5%; top: 57.310197875711765%; }
+.cezetmap .chotebor             { left: 50.375%; top: 53.622562300874456%; }
+.cezetmap .pribram              { left: 28.249999999999996%; top: 53.6225623008745%;}
+.cezetmap .benesov              { left: 38.625%; top: 50.15184646573346%; }
+.cezetmap .kutna-hora           { left: 46.875%; top: 43.644254274844094%;}
+.cezetmap .caslav               { left: 48.75%; top: 45.5965319321109%;  }
+.cezetmap .kolin                { left: 46%; top: 40.824297658792034%;}
+.cezetmap .podebrady            { left: 44.625%; top: 36.26898312516947%; }
+.cezetmap .nymburk              { left: 43.625%; top: 34.9674646869916%;  }
+.cezetmap .neratovice           { left: 35.875%; top: 31.93058833124322%; }
+.cezetmap .melnik               { left: 35.375%; top: 27.592193537316973%; }
+.cezetmap .slany                { left: 29.5%; top: 33.015187029724785%; }
+.cezetmap .rakovnik             { left: 24.5%; top: 37.78742130304366%; }
+.cezetmap .beroun               { left: 29.375%; top: 42.993495055755155%; }
+.cezetmap .kadan                { left: 17.625%; top: 26.941434318228037%; }
+.cezetmap .zatec                { left: 21.5%; top: 29.11063171519116%; }
+.cezetmap .louny                { left: 25.5%; top: 28.24295275640591%; }
+.cezetmap .jirkov               { left: 20.375%; top: 21.952280305212852%; }
+.cezetmap .litomerice           { left: 30.25%; top: 20.433842127338668%; }
+.cezetmap .rumburk              { left: 36.25%; top: 4.164861650115238%; }
+.cezetmap .novy-bor             { left: 36.5%; top: 11.757052539486171%; }
+.cezetmap .turnov               { left: 45.25%; top: 18.91540394946448%; }
+.cezetmap .jicin                { left: 48.5%; top: 24.772236921264916%; }
+.cezetmap .nachod               { left: 60.25%; top: 25.856835619746477%; }
+.cezetmap .trutnov              { left: 56.25%; top: 19.566163168553416%; }
+
+/* ==============================
+ * Mesta CR - pridane uzivateli
+ * ==============================
+ */
+
+.cezetmap .namest-nad-oslavou   { left: 59.25%; top: 71.36659436008676%; }
+.cezetmap .velke-prilepy        { left: 32.625%; top: 35.401301683934804%; }
