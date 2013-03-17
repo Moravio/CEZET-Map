@@ -1,5 +1,5 @@
-/* CEZET Map v2.2
- * 8.3.2013 (c) Moravio.com
+/* CEZET Map v2.3
+ * 17.3.2013 (c) Moravio.com
  * Licence CC BY
  */
 
