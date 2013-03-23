@@ -36,7 +36,8 @@
 }
 
 .cezetmap .kraje,
-.cezetmap .mesta{
+.cezetmap .mesta,
+.cezetmap .numbers{
 	display: block;
 	position: absolute;
 	left: 0;
@@ -139,6 +140,33 @@
 
 .cezetmap .kraj_hover                { color: #ff4354; }
 .cezetmap .kraj_active               { color: #138cc6; }
+
+/* ==============================
+ * nastaveni stredu pro kraje
+ * ============================== 
+ */
+
+.cezetmap .zlinsky_center, .cezetmap .moravskoslezsky_center, .cezetmap .jihomoravsky_center, .cezetmap .olomoucky_center,
+.cezetmap .vysocina_center, .cezetmap .pardubicky_center, .cezetmap .kralovehradecky_center, .cezetmap .jihocesky_center,
+.cezetmap .hlavni-mesto-praha_center, .cezetmap .stredocesky_center, .cezetmap .liberecky_center, .cezetmap .plzensky_center,
+.cezetmap .ustecky_center, .cezetmap .karlovarsky_center{
+	position: absolute;
+}
+
+.cezetmap .zlinsky_center            { left: 85.125%; top: 70.06507592190889%; }
+.cezetmap .moravskoslezsky_center    { left: 86.375%; top: 48.80694143167028%; }
+.cezetmap .jihomoravsky_center       { left: 68.125%; top: 76.13882863340564%; }
+.cezetmap .olomoucky_center          { left: 73.875%; top: 52.27765726681128%; }
+.cezetmap .vysocina_center           { left: 53.75%; top: 63.55748373101952%; }
+.cezetmap .pardubicky_center         { left: 60.25%; top: 47.50542299349241%; }
+.cezetmap .kralovehradecky_center    { left: 54.37499999999999%; top: 26.68112798264642%; }
+.cezetmap .jihocesky_center          { left: 32.875%; top: 77.22342733188721%; }
+.cezetmap .hlavni-mesto-praha_center { left: 33.875%; top: 40.3470715835141%; }
+.cezetmap .stredocesky_center        { left: 33.5%; top: 51.84381778741866%; }
+.cezetmap .liberecky_center          { left: 41.75%; top: 13.665943600867678%; }
+.cezetmap .plzensky_center           { left: 15.125%; top: 57.04989154013015%; }
+.cezetmap .ustecky_center            { left: 24.75%; top: 23.427331887201735%; }
+.cezetmap .karlovarsky_center        { left: 10.375%; top: 37.52711496746204%; }
 
 /* ==============================
  * nastaveni mest
