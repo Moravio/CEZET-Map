@@ -16,6 +16,28 @@
 	font-size: 800px;
 }
 
+.cezetmap .numbers{
+	z-index: 900;
+	font-size: 18px;
+	color: white;
+}
+
+.cezetmap .numbers li{
+	background: black;
+	padding: 10px;
+	width: 70px;
+	margin-left: -25px;
+	margin-top: -15px;
+
+	-moz-border-radius: 11px / 10px;
+	-webkit-border-radius: 11px / 10px;
+	border-radius: 11px / 10px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: rgba(34,44,64,.8);
+}
+
 /* ============================== */
 /* stylovani stranky              */
 /* ============================== */
