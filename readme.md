@@ -13,6 +13,8 @@ Mapa ČR jako vektorové písmo
 - Optimalizace velikosti JS a CSS
 - SCSS (jednodušší implementace do SASS projektů)
 - CSS (minifikovaná verze)
+- Střed krajů (pozice pro popisky krajů)
+- Aktualizace Dema (demo/volby/index.html)
 
 ### v2.2
 
