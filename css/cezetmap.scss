@@ -120,8 +120,8 @@
 .cezetmap .stredocesky:before        { content: "j"; }
 .cezetmap .liberecky:before          { content: "k"; }
 .cezetmap .plzensky:before           { content: "l"; }
-.cezetmap .ustecky:before            { content: "m"; }
-.cezetmap .karlovarsky:before        { content: "n"; }
+.cezetmap .karlovarsky:before        { content: "m"; }
+.cezetmap .ustecky:before            { content: "n"; }
 
 .cezetmap .zlinsky                   { color: #59C6F5; }
 .cezetmap .moravskoslezsky           { color: #90D9F8; }
@@ -192,7 +192,19 @@
 	margin-left: -4px;
 	margin-top: -4px;
 	background: white;
-	text-indent: 9999;
+}
+
+.cezetmap .mesto:after{
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	z-index: 600;
+	text-indent: 0;
+}
+
+.cezetmap .mesto_hover.mesto:after{
+	display: none;
 }
 
 .cezetmap .mesto_active:before,
