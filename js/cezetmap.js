@@ -66,16 +66,17 @@ $(".cezetmap").css("overflow","visible");
 $(".cezetmap")
 // simulace hover stavu nad jednotlivymi kraji
 .mousemove(function(e){
-	parentOffset = $(this).offset();
+	var parentOffset = $(this).offset();
 
 	// zjisteni absolutnich souradnic
-   	absX = e.pageX - parentOffset.left;
-   	absY = e.pageY - parentOffset.top;	
+   	var absX = e.pageX - parentOffset.left;
+   	var absY = e.pageY - parentOffset.top;	
 
    	// zjisteni procentualnich souradnic
-   	perX = (absX / cezetmap_width) * 100;
-   	perY = (absY / cezetmap_height) * 100;
+   	var perX = (absX / cezetmap_width) * 100;
+   	var perY = (absY / cezetmap_height) * 100;
 
+   	var krajID = 0;
 
    	for( var i=0; i<cezetmap.length; i++ ){
 		if(isPointInPoly(cezetmap[i], {x: perX, y: perY})){
@@ -104,15 +105,17 @@ $(".cezetmap")
 })
 // kliknuti na mapu
 .click(function(e){
-	parentOffset = $(this).offset();
+	var parentOffset = $(this).offset();
 
 	// zjisteni absolutnich souradnic
-   	absX = e.pageX - parentOffset.left;
-   	absY = e.pageY - parentOffset.top;	
+   	var absX = e.pageX - parentOffset.left;
+   	var absY = e.pageY - parentOffset.top;	
 
    	// zjisteni procentualnich souradnic
-   	perX = (absX / cezetmap_width) * 100;
-   	perY = (absY / cezetmap_height) * 100;
+   	var perX = (absX / cezetmap_width) * 100;
+   	var perY = (absY / cezetmap_height) * 100;
+
+   	var krajID = 0;
 
    	for( var i=0; i<cezetmap.length; i++ ){
 		if(isPointInPoly(cezetmap[i], {x: perX, y: perY})){
