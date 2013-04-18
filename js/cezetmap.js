@@ -141,7 +141,7 @@ $(".cezetmap .kraj a").click(function(){
 
 	// vypsani informaci do konzole
 	if( thisLink != undefined ){
-		console.log(thisLink);
+		//console.log(thisLink);
 	}
 
 	return false;
@@ -173,7 +173,7 @@ $(".cezetmap .mesto").click(function(){
 	
 	// vypsani informaci do konzole
 	if( thisLink != undefined ){
-		console.log(thisLink);
+		//console.log(thisLink);
 	}
 
 	return false;
