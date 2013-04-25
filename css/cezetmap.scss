@@ -8,6 +8,16 @@
  * ============================== 
  */
 
+// podpora v prohlizecich: http://caniuse.com/text-stroke
+// použití: @include text-stroke(1px, black);
+@mixin text-stroke($size, $color){
+-webkit-text-stroke: $size $color;
+   -moz-text-stroke: $size $color;
+     -o-text-stroke: $size $color;
+    -ms-text-stroke: $size $color;
+        text-stroke: $size $color;
+}
+
 @font-face {
 	font-family: 'cezetmap';
 	src:url('font/cezetmap.eot');
@@ -60,7 +70,7 @@
  * ============================== 
  */
 
-.cezetmap .kraje{
+.cezetmap .kraje{	
 	font-family: "cezetmap";
 	font-weight: normal; 
 	font-style: normal; 
