@@ -8,6 +8,12 @@ Mapa ČR jako vektorové písmo
 
 ## Changelog (Hlavní změny)
 
+### v2.5 (BETA)
+Vývojová větev: [Plugin](https://github.com/Moravio/CEZET-Map/tree/plugin)
+
+- jQuery plugin
+- JSON konfigurace měst a krajů
+
 ### v2.3
 
 - Optimalizace velikosti JS a CSS
