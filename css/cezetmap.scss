@@ -197,6 +197,10 @@
 	text-decoration: none;
 }
 
+.cezetmap .mesto a.noPointer{
+	cursor: default !important;
+}
+
 /* ==============================
  * nastaveni tooltipu pro mesta
  * ==============================

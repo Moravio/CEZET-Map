@@ -8,11 +8,13 @@
             regionItemClass:    "kraj",             // trida pro kraj
             regionHoverClass:   "kraj_hover",       // trida pro hover nad krajem
             regionActiveClass:  "kraj_active",      // trida pro aktivni kraj
+            regionClickable:    true,               // muze se na kraj klikat?
             cityAreaClass:      "mesta",            // trida pro mesta
             cityItemClass:      "mesto",            // trida pro mesto
             cityEnvClass:       "mesto_env",        // trida pro obaleni mesta (pomocna trida)
             cityHoverClass:     "mesto_hover",      // trida pro hover nad mestem
             cityActiveClass:    "mesto_active",     // trida pro aktivni mesto
+            cityClickable:      true,               // muze se na mesto klikat?
             cities:             []                  // jake mesta zobrazit? ([] | ["all"] | ["ostrava", "praha", ...])
         }
 
@@ -63,9 +65,10 @@
             for( var i=0; i<cezetmapRegion.length; i++ ){
                 var $this = cezetmapRegion[i];
                 var $item = $("<li></li>").attr({ "class": opt.regionItemClass +" "+ $this.class });
+
                 var $link = $("<a></a>").attr({ "href": $this.url, "title": $this.name }).text( $this.name );
-                
                 $link.appendTo( $item );
+
                 $item.appendTo( $regionAreaObj );
             }
 
@@ -115,8 +118,13 @@
                                     $item.attr({"class": opt.cityItemClass +" "+ $this.class});
                                     $item.css({"left": $this.pos[0].toFixed(2) + "%", "top": $this.pos[1].toFixed(2) + "%"});
 
+                                var linkPointerClass = "";
+                                if( opt.cityClickable == false ){
+                                    linkPointerClass = "noPointer";
+                                }
+
                                 var $link = $("<a></a>");
-                                    $link.attr({ "href": $this.url, "title": $this.name });
+                                    $link.attr({ "href": $this.url, "title": $this.name, "class": linkPointerClass });
                                     $link.text( $this.name );
                                     $link.wrapInner("<span class='" + opt.cityEnvClass + "'></span>");
                         
@@ -155,7 +163,11 @@
                     // zjisteni zda souradnice mysi lezi uvnitr souradnic kraje
                     if(isPointInPoly(cezetmapRegion[i].pos, {x: perX, y: perY})){
                         regionID = i;
-                        $(cezetmapSelector).css("cursor", "pointer");
+
+                        // zobrazeni ruky jen kdyz je povoleno na kraje klikat
+                        if( opt.regionClickable ){
+                            $(cezetmapSelector).css("cursor", "pointer");
+                        }
 
                         if( regionID != regionOld ){
 
@@ -211,7 +223,7 @@
                 regionSelected.addClass( opt.regionActiveClass );
 
                 // otevreni
-                if( regionLink != undefined ){
+                if( regionLink != undefined && opt.regionClickable ){
                     location.href = regionLink;
                 }
 
@@ -241,7 +253,7 @@
                 $(cityItemSelector).removeClass( opt.cityActiveClass );
                 $this.closest( opt.cityItemClass ).addClass( opt.cityActiveClass );
                 
-                if( cityLink != undefined ){
+                if( cityLink != undefined && opt.cityClickable ){
                     location.href = cityLink;
                 }
 
