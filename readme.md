@@ -13,6 +13,7 @@ Vývojová větev: [Plugin](https://github.com/Moravio/CEZET-Map/tree/plugin)
 
 - jQuery plugin
 - JSON konfigurace měst a krajů
+- Parametry pro konfiguraci pluginu
 
 ### v2.3
 
