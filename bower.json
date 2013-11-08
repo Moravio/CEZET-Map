@@ -1,0 +1,8 @@
+{
+  "name": "CEZET Map",
+  "version": "2.3.0",
+  "author": "Moravio (www.moravio.com)",
+  "dependencies": {
+    "jquery": ">=1.9"
+  }
+}
