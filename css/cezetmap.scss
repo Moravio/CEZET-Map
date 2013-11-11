@@ -5,7 +5,7 @@
 
 /* ==============================
  * obecne nastaveni mapy
- * ============================== 
+ * ==============================
  */
 
 // podpora v prohlizecich: http://caniuse.com/text-stroke
@@ -31,7 +31,7 @@
 
 /* ==============================
  * zakladni nastaveni mapy
- * ============================== 
+ * ==============================
  */
 
 .cezetmap{
@@ -41,7 +41,7 @@
 	width: 370px;
 	height: 213px;
 	margin: 0 auto;
-	position: relative;	
+	position: relative;
 	overflow: hidden;
 }
 
@@ -67,24 +67,26 @@
 
 /* ==============================
  * nastaveni kraju
- * ============================== 
+ * ==============================
  */
 
-.cezetmap .kraje{	
+.cezetmap .kraje{
 	font-family: "cezetmap";
-	font-weight: normal; 
-	font-style: normal; 
+	font-weight: normal;
+	font-style: normal;
 	font-size: 370px;
 	line-height: 1em;
 
+	/*
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
 	-ms-text-rendering: optimizeLegibility;
 	-o-text-rendering: optimizeLegibility;
 	text-rendering: optimizeLegibility;
+	*/
 	-moz-font-feature-settings: "liga=1";
 	-ms-font-feature-settings: "liga" 1;
-	-ms-font-feature-settings: "liga", "dlig";	
+	-ms-font-feature-settings: "liga", "dlig";
 	z-index: 700;
 }
 
@@ -118,7 +120,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.cezetmap .zlinsky:before            { content: "a"; }		
+.cezetmap .zlinsky:before            { content: "a"; }
 .cezetmap .moravskoslezsky:before    { content: "b"; }
 .cezetmap .jihomoravsky:before       { content: "c"; }
 .cezetmap .olomoucky:before          { content: "d"; }
@@ -153,7 +155,7 @@
 
 /* ==============================
  * nastaveni stredu pro kraje
- * ============================== 
+ * ==============================
  */
 
 .cezetmap .zlinsky_center, .cezetmap .moravskoslezsky_center, .cezetmap .jihomoravsky_center, .cezetmap .olomoucky_center,
