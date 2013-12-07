@@ -3,7 +3,7 @@
  * Licence CC BY
  */
 
-$(document).ready(function(){		
+$(document).ready(function(){
 
 //Jonas Raoni Soares Silva
 //http://jsfromhell.com/math/is-point-in-poly [v1.0]
@@ -46,7 +46,7 @@ var cezetmap = [
 	// karlovarsky
 	[{"x":1.7000000000000002, "y":27.77777777777778}, {"x":0.8, "y":27.95138888888889}, {"x":1.2, "y":29.51388888888889}, {"x":0.7000000000000001, "y":30.381944444444443}, {"x":2.1, "y":34.02777777777778}, {"x":1.9, "y":35.41666666666667}, {"x":2.7, "y":37.67361111111111}, {"x":5.8999999999999995, "y":41.31944444444444}, {"x":6.1, "y":42.53472222222222}, {"x":6.6000000000000005, "y":43.22916666666667}, {"x":6.7, "y":44.27083333333333}, {"x":7.3999999999999995, "y":44.09722222222222}, {"x":8, "y":43.57638888888889}, {"x":8.6, "y":44.44444444444444}, {"x":9.2, "y":43.40277777777778}, {"x":10.299999999999999, "y":42.70833333333333}, {"x":10.9, "y":43.22916666666667}, {"x":11.5, "y":43.22916666666667}, {"x":12.2, "y":43.75}, {"x":12.7, "y":43.05555555555556}, {"x":12.7, "y":41.84027777777778}, {"x":14.7, "y":39.58333333333333}, {"x":15.8, "y":39.58333333333333}, {"x":16.5, "y":40.79861111111111}, {"x":16.6, "y":39.40972222222222}, {"x":17.299999999999997, "y":38.88888888888889}, {"x":17.7, "y":37.15277777777778}, {"x":16.900000000000002, "y":35.59027777777778}, {"x":17.4, "y":34.54861111111111}, {"x":16.900000000000002, "y":33.33333333333333}, {"x":17, "y":32.63888888888889}, {"x":16.6, "y":31.770833333333332}, {"x":16.8, "y":30.208333333333332}, {"x":16.5, "y":29.166666666666668}, {"x":17, "y":28.125}, {"x":16.6, "y":27.256944444444443}, {"x":15.1, "y":27.430555555555557}, {"x":15.1, "y":26.38888888888889}, {"x":14.7, "y":26.041666666666668}, {"x":13.3, "y":26.041666666666668}, {"x":11.3, "y":23.26388888888889}, {"x":10.100000000000001, "y":23.61111111111111}, {"x":9.4, "y":25}, {"x":8.799999999999999, "y":24.479166666666664}, {"x":6.7, "y":25.17361111111111}, {"x":6.5, "y":25.694444444444443}, {"x":6.5, "y":26.90972222222222}, {"x":5, "y":27.77777777777778}, {"x":4.7, "y":29.34027777777778}, {"x":4, "y":30.729166666666668}, {"x":3.9, "y":32.29166666666667}, {"x":3.5999999999999996, "y":34.20138888888889}, {"x":3, "y":33.15972222222222}, {"x":2.9000000000000004, "y":31.59722222222222}, {"x":2.7, "y":31.25}, {"x":2.8000000000000003, "y":30.208333333333332}, {"x":2.6, "y":30.03472222222222}, {"x":2, "y":29.86111111111111}]
 
-];	
+];
 
 // pokud bude pouzito v responsivnim designu je nutne prepocitat pri resize okna
 var cezetmap_width = parseInt( $(".cezetmap").css("width") );
@@ -70,7 +70,7 @@ $(".cezetmap")
 
 	// zjisteni absolutnich souradnic
    	var absX = e.pageX - parentOffset.left;
-   	var absY = e.pageY - parentOffset.top;	
+   	var absY = e.pageY - parentOffset.top;
 
    	// zjisteni procentualnich souradnic
    	var perX = (absX / cezetmap_width) * 100;
@@ -86,7 +86,7 @@ $(".cezetmap")
 			// jen pokud se kraj zmenil
 			if( krajID != krajOld ){
 				$(".cezetmap .kraj").removeClass("kraj_hover");
-				$(".cezetmap .kraj").eq(krajID).addClass("kraj_hover");				
+				$(".cezetmap .kraj").eq(krajID).addClass("kraj_hover");
 				krajOld = krajID;
 			}
 			break;
@@ -109,7 +109,7 @@ $(".cezetmap")
 
 	// zjisteni absolutnich souradnic
    	var absX = e.pageX - parentOffset.left;
-   	var absY = e.pageY - parentOffset.top;	
+   	var absY = e.pageY - parentOffset.top;
 
    	// zjisteni procentualnich souradnic
    	var perX = (absX / cezetmap_width) * 100;
@@ -120,7 +120,7 @@ $(".cezetmap")
    	for( var i=0; i<cezetmap.length; i++ ){
 		if(isPointInPoly(cezetmap[i], {x: perX, y: perY})){
 			krajID = i;
-			break;				
+			break;
 		}
    	}
 
@@ -138,7 +138,7 @@ $(".cezetmap .kraj").wrapInner('<span class="kraj_env" />');
 $(".cezetmap .kraj a").click(function(){
 	var $this = $(this);
 	var thisLink = $this.attr("href");
-	
+
 	$(".cezetmap .kraj").removeClass("kraj_active");
 	$this.closest(".kraj").addClass("kraj_active");
 
@@ -160,23 +160,24 @@ $(".cezetmap .mesto").wrapInner('<span class="mesto_env" />');
 $(".cezetmap .mesto").hover(
 	function(){
 		$(".cezetmap .mesto").removeClass("mesto_hover");
-		$(this).addClass("mesto_hover");	
+		$(this).addClass("mesto_hover");
 	},
 	function(){
-		$(".cezetmap .mesto").removeClass("mesto_hover");		
+		$(".cezetmap .mesto").removeClass("mesto_hover");
 	}
 );
 
 $(".cezetmap .mesto").click(function(){
 	var $this = $(this);
 	var thisLink = $this.find("a").attr("href");
-	
+
 	$(".cezetmap .mesto").removeClass("mesto_active");
 	$this.closest(".mesto").addClass("mesto_active");
-	
+
 	// vypsani informaci do konzole
 	if( thisLink != undefined ){
 		//console.log(thisLink);
+		//window.location = thisLink;
 	}
 
 	return false;
