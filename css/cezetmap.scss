@@ -5,7 +5,7 @@
 
 /* ==============================
  * obecne nastaveni mapy
- * ============================== 
+ * ==============================
  */
 
 // podpora v prohlizecich: http://caniuse.com/text-stroke
@@ -31,7 +31,7 @@
 
 /* ==============================
  * zakladni nastaveni mapy
- * ============================== 
+ * ==============================
  */
 
 .cezetmap{
@@ -41,7 +41,7 @@
 	width: 370px;
 	height: 213px;
 	margin: 0 auto;
-	position: relative;	
+	position: relative;
 	overflow: hidden;
 }
 
@@ -67,13 +67,13 @@
 
 /* ==============================
  * nastaveni kraju
- * ============================== 
+ * ==============================
  */
 
-.cezetmap .kraje{	
+.cezetmap .kraje{
 	font-family: "cezetmap";
-	font-weight: normal; 
-	font-style: normal; 
+	font-weight: normal;
+	font-style: normal;
 	font-size: 370px;
 	line-height: 1em;
 
@@ -84,7 +84,7 @@
 	text-rendering: optimizeLegibility;
 	-moz-font-feature-settings: "liga=1";
 	-ms-font-feature-settings: "liga" 1;
-	-ms-font-feature-settings: "liga", "dlig";	
+	-ms-font-feature-settings: "liga", "dlig";
 	z-index: 700;
 }
 
@@ -118,7 +118,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-.cezetmap .zlinsky:before            { content: "a"; }		
+.cezetmap .zlinsky:before            { content: "a"; }
 .cezetmap .moravskoslezsky:before    { content: "b"; }
 .cezetmap .jihomoravsky:before       { content: "c"; }
 .cezetmap .olomoucky:before          { content: "d"; }
@@ -153,7 +153,7 @@
 
 /* ==============================
  * nastaveni stredu pro kraje
- * ============================== 
+ * ==============================
  */
 
 .cezetmap .zlinsky_center, .cezetmap .moravskoslezsky_center, .cezetmap .jihomoravsky_center, .cezetmap .olomoucky_center,
@@ -406,3 +406,8 @@
 .cezetmap .velke-prilepy        { left: 32.625%; top: 35.401301683934804%; }
 .cezetmap .baska                { left: 92.25%; top: 56.10990586353227%; }
 .cezetmap .lipnice-nad-sazavou  { left: 49.25%; top: 56.326826844453294%; }
+.cezetmap .jesenik              { left: 74.9375%; top: 32.75488069414317%; }
+.cezetmap .breclav              { left: 70.0625%; top: 88.28633405639913%; }
+.cezetmap .zdar-nad-sazavou     { left: 55.93749999999999%; top: 59.219088937093275%; }
+.cezetmap .rychnov-nad-kneznou  { left: 61.5625%; top: 35.140997830802604%; }
+.cezetmap .semily               { left: 47.9375%; top: 17.136659436008678%; }
