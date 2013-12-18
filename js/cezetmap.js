@@ -157,11 +157,14 @@ $(".cezetmap .kraj a").click(function(){
 // obaleni nazvu mesta - nutne pro stylovani
 $(".cezetmap .mesto").wrapInner('<span class="mesto_env" />');
 
-$(".cezetmap .mesto").hover(
+$(".cezetmap .mesto")
+.mouseenter(
 	function(){
 		$(".cezetmap .mesto").removeClass("mesto_hover");
 		$(this).addClass("mesto_hover");
-	},
+	}
+)
+.mouseleave(
 	function(){
 		$(".cezetmap .mesto").removeClass("mesto_hover");
 	}
