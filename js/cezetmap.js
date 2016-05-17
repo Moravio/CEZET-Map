@@ -2,24 +2,36 @@
     $.cezetmap = function(element, options) {
 
         var defaults = {
-            width:              "500",              // sirka mapy
-            cezetmapClass:      "cezetmap",         // zakladni trida pro stylovani
-            regionAreaClass:    "kraje",            // trida pro kraje
-            regionItemClass:    "kraj",             // trida pro kraj
-            regionHoverClass:   "kraj_hover",       // trida pro hover nad krajem
-            regionActiveClass:  "kraj_active",      // trida pro aktivni kraj
-            regionClickable:    true,               // muze se na kraj klikat?
-            cityAreaClass:      "mesta",            // trida pro mesta
-            cityItemClass:      "mesto",            // trida pro mesto
-            cityEnvClass:       "mesto_env",        // trida pro obaleni mesta (pomocna trida)
-            cityHoverClass:     "mesto_hover",      // trida pro hover nad mestem
-            cityActiveClass:    "mesto_active",     // trida pro aktivni mesto
-            cityClickable:      true,               // muze se na mesto klikat?
-            cities:             []                  // jake mesta zobrazit? ([] | ["all"] | ["ostrava", "praha", ...])
-        }
+            width:              "370",                  // sirka mapy
+            cezetmapClass:      "cezetmap",             // zakladni trida pro stylovani
+            regionAreaClass:    "regions",              // trida pro kraje
+            regionItemClass:    "region",               // trida pro kraj
+            regionHoverClass:   "region-hover",         // trida pro hover nad krajem
+            regionActiveClass:  "region-active",        // trida pro aktivni kraj
+            regionClickable:    true,                   // muze se na kraj klikat?
+            cityAreaClass:      "cities",               // trida pro mesta
+            cityItemClass:      "city",                 // trida pro mesto
+            cityEnvClass:       "city-env",             // trida pro obaleni mesta (pomocna trida)
+            cityHoverClass:     "city-hover",           // trida pro hover nad mestem
+            cityActiveClass:    "city-active",          // trida pro aktivni mesto
+            cityClickable:      true,                   // muze se na mesto klikat?
+            cities:             [],                     // jake mesta zobrazit? ([] | ["all"] | ["ostrava", "praha", ...])
+            markerWrapperClass: "markers",              // obalujici trida pro markery
+            markerSelector:     false                   // trida pro markery
+        };
+
+        var mapPositions = {
+            top: 51.0557188,
+            bottom: 48.5517785,
+            left: 12.0884173,
+            right: 18.8570223
+        };
+
+        mapPositions.horizontal = 100 / (mapPositions.right - mapPositions.left);
+        mapPositions.vertical = 100 / (mapPositions.bottom - mapPositions.top);
 
         var plugin = this;
-        plugin.settings = {}
+        plugin.settings = {};
 
         var $element = $(element);
         var element = element;
@@ -138,6 +150,50 @@
                 $cityAreaObj.appendTo( $cezetmapObj );
             }
 
+            function centerMarker($marker, lat, lng) {
+                var left = 100 - (mapPositions.horizontal * (mapPositions.right - lng));
+                var top = 100 - (mapPositions.vertical * (mapPositions.bottom - lat));
+                $marker.css({
+                    left: left + "%",
+                    top: top + "%"
+                });
+            }
+
+            if(opt.markerSelector){
+                var $marker;
+                var defaultMarkerCss = {
+                    position: "absolute"
+                };
+                $(opt.markerSelector).css(defaultMarkerCss);
+
+                var $markers = $element.find(opt.markerSelector);
+                $markers.appendTo($cezetmapObj);
+                $markers.wrapAll("<div class='"+opt.markerWrapperClass+"'></div>");
+
+                $($markers).each(function () {
+                    var lat = false, lng = false, data, position;
+                    $marker = $(this);
+                    data = $marker.data();
+                    if(data.position){
+                        position = data.position.split(",");
+                        lat = position[0];
+                        lng = position[1];
+                    }
+                    if(data.lng){
+                        lng = data.lng;
+                    }
+                    if(data.lat){
+                        lat = data.lat;
+                    }
+                    if(!lat || !lng){
+                        console.error("Marker position data not found.");
+                    }
+                    else{
+                        centerMarker($marker, lat, lng);
+                    }
+                });
+            }
+
             // ==========================
             // vytvareni mapy
             // ==========================
@@ -188,7 +244,7 @@
             // --------------------------
             $cezetmapObj.on("mouseleave", function(e){
                 regionOld = -1;
-                $(regionItemSelector).removeClass("kraj_hover");
+                $(regionItemSelector).removeClass(opt.regionHoverClass);
             });
 
             // --------------------------
