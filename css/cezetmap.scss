@@ -35,8 +35,8 @@
 	overflow: hidden;
 }
 
-.cezetmap .kraje,
-.cezetmap .mesta{
+.cezetmap .regions,
+.cezetmap .cities{
 	display: block;
 	position: absolute;
 	left: 0;
@@ -59,7 +59,7 @@
  * ============================== 
  */
 
-.cezetmap .kraje{	
+.cezetmap .regions{
 	font-family: "cezetmap";
 	font-weight: normal; 
 	font-style: normal; 
@@ -79,19 +79,19 @@
 
 /* IE9, IE10 hack */
 @media screen and (min-width:0\0) {
-	.cezetmap .kraje{
+	.cezetmap .regions{
 		line-height: normal;
 	}
 }
 
-.cezetmap .kraj{
+.cezetmap .region{
 	display: block;
 	position: absolute;
 	left: 0;
 	top: 0;
 }
 
-.cezetmap .kraj_env{
+.cezetmap .region-env{
 	display: none;
 }
 
@@ -145,20 +145,20 @@
  * ==============================
  */
 
-.cezetmap .mesta{
+.cezetmap .cities{
 	z-index: 800;	
 }
 
-.cezetmap .mesto,
-.cezetmap .mesto_active:before,
-.cezetmap .mesto_hover:before{
+.cezetmap .city,
+.cezetmap .city-active:before,
+.cezetmap .city-hover:before{
 	display: block;
 	position: absolute;
 	font-size: 0;
 	border-radius: 100%;
 }
 
-.cezetmap .mesto{
+.cezetmap .city{
 	width: 8px;
 	height: 8px;
 	margin-left: -4px;
@@ -167,7 +167,7 @@
 	background: white;
 }
 
-.cezetmap .mesto:after{
+.cezetmap .city:after{
 	display: block;
 	width: 20px;
 	height: 20px;
@@ -176,12 +176,12 @@
 	text-indent: 0;
 }
 
-.cezetmap .mesto_hover.mesto:after{
+.cezetmap .city-hover.mesto:after{
 	display: none;
 }
 
-.cezetmap .mesto_active:before,
-.cezetmap .mesto_hover:before{
+.cezetmap .city-active:before,
+.cezetmap .city-hover:before{
 	content: "";
 	width: 16px;
 	height: 16px;
@@ -191,13 +191,13 @@
 	z-index: 800;
 }
 
-.cezetmap .mesto a{
+.cezetmap .city a{
 	display: block;
 	color: white;
 	text-decoration: none;
 }
 
-.cezetmap .mesto a.noPointer{
+.cezetmap .city a.noPointer{
 	cursor: default !important;
 }
 
@@ -206,7 +206,7 @@
  * ==============================
  */
 
-.cezetmap .mesto_env{
+.cezetmap .city-env{
 	display: none;
 	-moz-border-radius: 11px / 10px;
 	-webkit-border-radius: 11px / 10px;
@@ -228,7 +228,7 @@
 	z-index: 999;
 }
 
-.cezetmap .mesto_env:before{
+.cezetmap .city-env:before{
 	content: " ";
 	display: block;
 	position: absolute;
@@ -243,7 +243,7 @@
 	border-width: 6px;
 }
 
-.cezetmap .mesto_hover .mesto_env{
+.cezetmap .city-hover .city-env{
 	display: block;
 }
 
