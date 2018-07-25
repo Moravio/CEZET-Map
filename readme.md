@@ -1,6 +1,13 @@
 # CEZET Map v2.3
 Mapa ČR jako vektorové písmo
 
+## Vývoj ukončen!
+
+**Vývoj projektu byl ukončen a repozitář již není udržovaný!**
+
+Pokud potřebujete interaktivní mapu ČR, doporučujeme použít [MapSVG pro ČR](http://mapsvg.com/maps/czech-republic/), která umí hodně užitečných věcí (JS eventy, GPS body, Interaktivitu, Wordpress plugin).
+
+
 ## Instalace
 
     bower install cezetmap
